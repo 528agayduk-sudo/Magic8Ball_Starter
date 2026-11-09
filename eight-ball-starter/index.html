@@ -28,80 +28,40 @@
     </div>
   </header>
 
-  <main class="container py-5">
+  <main class="container layout">
+    <section class="panel question-panel">
+      <h2>Your Question</h2>
 
-    <!-- ============ HOW IT WORKS ============ -->
-    <section class="mb-5">
-      <h2 class="section-title text-center mb-4">How It Works</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card step-card h-100">
-            <div class="card-body">
-              <span class="step-number">1</span>
-              <h3 class="h5 mt-3">Enter your name</h3>
-              <p class="mb-0">Placeholder text. Explain this step for your users.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card step-card h-100">
-            <div class="card-body">
-              <span class="step-number">2</span>
-              <h3 class="h5 mt-3">Ask a question</h3>
-              <p class="mb-0">Placeholder text. Explain this step for your users.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card step-card h-100">
-            <div class="card-body">
-              <span class="step-number">3</span>
-              <h3 class="h5 mt-3">Get your answer</h3>
-              <p class="mb-0">Placeholder text. Explain this step for your users.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <label for="nameInput" class="form-label">Your Name</label>
+      <input type="text" id="nameInput" class="form-control" placeholder="Maya">
+
+      <label for="questionInput" class="form-label">Your yes-or-no Question</label>
+      <input type="text" id="questionInput" class="form-control" placeholder="Will I pass my test?">
+
+      <p id="greeting" class="greeting visually-hidden">Hello!</p>
+      <p id="questionOut" class="question-out visually-hidden">Your question will appear here.</p>
+
+      <button type="button" id="askButton" onclick="askEightBall()" class="btn btn-ask">Ask the 8 Ball</button>
     </section>
 
-    <div class="row g-4">
-
-      <!-- ============ QUESTION FORM ============ -->
-      <section class="col-lg-5">
-        <div class="card main-card h-100">
-          <div class="card-body p-4">
-            <h2 class="h4 mb-4">Your Question</h2>
-
-            <label for="nameInput" class="form-label">Your name</label>
-            <input type="text" id="nameInput" class="form-control mb-3" placeholder="Maya">
-
-            <label for="questionInput" class="form-label">Your yes-or-no question</label>
-            <input type="text" id="questionInput" class="form-control mb-4" placeholder="Will I pass my test?">
-
-            <button type="button" id="askButton" onclick="askEightBall()" class="btn btn-ask w-100">Ask the 8 Ball</button>
-          </div>
+    <section class="panel result-panel text-center" id="results">
+      <div class="ball">
+        <div class="window">
+          <p id="answer" class="answer"></p>
         </div>
-      </section>
+      </div>
 
-      <!-- ============ RESULTS ============ -->
-      <section id="results" class="col-lg-7">
-        <div class="card main-card h-100">
-          <div class="card-body p-4 text-center">
-            <p id="greeting" class="greeting">Hello!</p>
-            <p id="questionOut" class="question-out">Your question will appear here.</p>
+      <div id="answerType" class="answer-type">YES/NO/MAYBE</div>
+    </section>
 
-            <div class="ball">
-              <div class="window">
-                <p id="answer" class="answer">8</p>
-              </div>
-            </div>
-
-            <div id="answerType" class="answer-type mt-4"></div>
-          </div>
-        </div>
-      </section>
-
-    </div>
+    <section class="panel how-it-works-panel">
+      <h2>How it works!</h2>
+      <ul class="how-it-works-list">
+        <li>Enter Your Name!</li>
+        <li>Ask The Question</li>
+        <li>Get Your Answer!!</li>
+      </ul>
+    </section>
   </main>
 
   <!-- ============ FOOTER ============ -->

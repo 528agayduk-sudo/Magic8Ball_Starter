@@ -23,6 +23,7 @@ function askEightBall() {
   }
 
 document.getElementById('greeting').textContent = greeting;
+document.getElementById('greeting').classList.remove('visually-hidden');
 
 //check the question
 if (userQuestion ==='') {
